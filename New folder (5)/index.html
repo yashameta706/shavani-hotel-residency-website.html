@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shavani Hotel & Residency</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+nav {
+  position: fixed;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(12px);
+  color: white;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+nav ul li:hover {
+  color: gold;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hero.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 65px;
+  animation: fadeDown 1s ease;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-top: 10px;
+  animation: fadeUp 1s ease;
+}
+
+.hero button {
+  margin-top: 20px;
+  padding: 14px 35px;
+  border: none;
+  background: gold;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.hero button:hover {
+  background: orange;
+}
+
+/* ANIMATIONS */
+@keyframes fadeDown {
+  from {opacity:0; transform: translateY(-30px);}
+  to {opacity:1;}
+}
+
+@keyframes fadeUp {
+  from {opacity:0; transform: translateY(30px);}
+  to {opacity:1;}
+}
+
+/* SECTIONS */
+section {
+  padding: 90px 50px;
+  text-align: center;
+}
+
+/* ABOUT */
+.about {
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.7;
+}
+
+/* ROOMS */
+.rooms {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.room {
+  width: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+  transition: 0.4s;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.room:hover {
+  transform: translateY(-12px);
+}
+
+.room img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.room h3 {
+  padding: 15px;
+}
+
+/* LUXURY SECTION */
+.luxury {
+  height: 70vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hero.jpg') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.luxury h2 {
+  font-size: 45px;
+}
+
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* CONTACT */
+.contact p {
+  font-size: 18px;
+  margin: 8px;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  color: white;
+  padding: 20px;
+}
+
+/* WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: green;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+  <h2>Shavani Hotel</h2>
+  <ul>
+    <li onclick="scrollToSection('home')">Home</li>
+    <li onclick="scrollToSection('rooms')">Rooms</li>
+    <li onclick="scrollToSection('gallery')">Gallery</li>
+    <li onclick="scrollToSection('contact')">Contact</li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+
+<div class="hero" id="home">
+  <div>
+    <h1>Shavani Hotel & Residency</h1>
+    <p>Luxury Stay in Kelwera, Rajsamand</p>
+    <button onclick="alert('Call 8849322204')">Book Now</button>
+  </div>
+</div>
+
+<!-- ABOUT -->
+
+<section>
+  <h2>About Us</h2>
+  <p class="about">
+    Welcome to Shavani Hotel & Residency, located in Kelwera, Rajsamand, Rajasthan.
+    Experience luxury, comfort, and premium hospitality. Perfect for family stays,
+    business trips, and peaceful getaways.
+  </p>
+</section>
+
+<!-- ROOMS -->
+
+<section id="rooms">
+  <h2>Our Rooms & Amenities</h2>
+  <div class="rooms">
+    <div class="room">
+      <img src="hero.jpg">
+      <h3>Indoor Swimming Pool</h3>
+    </div>
+    <div class="room">
+      <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2">
+      <h3>Deluxe Room</h3>
+    </div>
+    <div class="room">
+      <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa">
+      <h3>Luxury Suite</h3>
+    </div>
+  </div>
+</section>
+
+<!-- LUXURY SECTION -->
+
+<div class="luxury">
+  <h2>Experience Premium Comfort</h2>
+</div>
+
+<!-- GALLERY -->
+
+<section id="gallery">
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <img src="hero.jpg">
+    <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427">
+    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
+  </div>
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+  <h2>Contact Us</h2>
+  <p>📍 Kelwera, Rajsamand, Rajasthan</p>
+  <p>📞 8849322204</p>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+  <p>© 2026 Shavani Hotel & Residency</p>
+</footer>
+
+<!-- WHATSAPP -->
+
+<a class="whatsapp" href="https://wa.me/918849322204">💬</a>
+
+<script>
+function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({behavior: 'smooth'});
+}
+</script>
+
+</body>
+</html>
